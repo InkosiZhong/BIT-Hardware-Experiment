@@ -28,5 +28,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LAB/cpu/flow-line-cpu/flow-line-
 INFO: [VRFC 10-311] analyzing module sign_ext
 INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LAB/cpu/flow-line-cpu/flow-line-cpu.srcs/sim_1/new/testbench.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module testbench
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/LAB/cpu/flow-line-cpu/flow-line-cpu.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl

@@ -31,9 +31,7 @@ module raw_handler(
     wire [2:0] reg2_relate = {i_reg_we1 & (i_reg2_addr == i_last_waddr1),
                                i_reg_we2 & (i_reg2_addr == i_last_waddr2),
                                i_reg_we3 & (i_reg2_addr == i_last_waddr3)};
-    assign o_wait = ((reg1_relate[2] | reg2_relate[2]) & i_reg_wc1) | 
-                    ((reg1_relate[1] | reg2_relate[1]) & i_reg_wc2) | 
-                    ((reg1_relate[0] | reg2_relate[0]) & i_reg_wc3);
+    assign o_wait = (reg1_relate[2] | reg2_relate[2]) & i_reg_wc1;
     assign o_reg1_data = reg1_relate[2] ? i_reg_wdata1 :
                          reg1_relate[1] ? i_reg_wdata2 :
                          reg1_relate[0] ? i_reg_wdata3 : i_reg1_data;

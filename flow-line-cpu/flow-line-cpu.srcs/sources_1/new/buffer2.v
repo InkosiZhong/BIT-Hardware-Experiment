@@ -4,7 +4,6 @@ module buffer2(
     input clk,
     input rst,
     input i_flush,
-    input i_wait,
     // cmd
     input i_reg_we, // write enable
     input i_reg_wc, // write control
@@ -63,7 +62,7 @@ module buffer2(
             buf_reg_dc <= 0;
             buf_alu_c <= 0;
         end
-        else if(~i_wait) begin
+        else begin
             buf_reg_we <= i_reg_we;
             buf_reg_wc <= i_reg_wc;
             buf_dmem_we <= i_dmem_we;
@@ -100,7 +99,7 @@ module buffer2(
             buf_pc <= 0;
             buf_instr_index <= 0;
         end
-        else if(~i_wait) begin
+        else begin
             buf_reg1_data <= i_reg1_data;
             buf_reg2_data <= i_reg2_data;
             buf_rt_addr <= i_rt_addr;

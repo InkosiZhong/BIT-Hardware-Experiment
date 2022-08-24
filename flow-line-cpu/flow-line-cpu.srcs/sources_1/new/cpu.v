@@ -148,8 +148,7 @@ module cpu(
     buffer2 buffer2(
         .clk(clk),
         .rst(rst),
-        .i_flush(jc),
-        .i_wait(wait1clk),
+        .i_flush(jc | wait1clk),
         // cmd
         .i_reg_we(reg_we1),
         .i_reg_wc(reg_wc1),
