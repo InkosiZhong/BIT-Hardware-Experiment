@@ -1,5 +1,7 @@
 `timescale 1ns / 1ps
 
+`include "macro.vh"
+
 module ctrl(
     input [5:0] i_op_code,
     input [5:0] i_func_code,
@@ -13,32 +15,16 @@ module ctrl(
     output o_reg_we,    // write enable for register heap
     output o_ext_type
     );
-    wire [2:0] inst_type; /* 0:lui, 1:lw, 2:sw, 3:addiu, 4:add, 5:srav, 6:beq, 7:j
-    lui     001111
-    lw      100011
-    sw      101011
-    addiu   001000
-    add     000000 100000
-    srav    000000 000111
-    beq     000100
-    j       000010
-    */
-    assign inst_type = (i_op_code == 6'b000010) ? 7 :
-                       (i_op_code == 6'b000100) ? 6 :
-                       (i_op_code == 6'b001001) ? 3 :
-                       (i_op_code == 6'b001111) ? 0 :
-                       (i_op_code == 6'b100011) ? 1 :
-                       (i_op_code == 6'b101011) ? 2 :
-                       (i_func_code == 6'b000111) ? 5 : 4;
-    assign o_alu_c = (inst_type == 0) ? 2'b10 :
-                     (inst_type == 5) ? 2'b01 : 
-                     (inst_type == 6) ? 2'b11 : 2'b00;
-    assign o_br = (inst_type == 6);
-    assign o_j = (inst_type == 7);
-    assign o_reg_dc = (inst_type == 4 || inst_type == 5 || inst_type == 6);
+    
+    assign o_alu_c = (i_op_code == `OP_LUI) ? 2'b10 :
+                     (i_op_code == `OP_SPCL & i_func_code == `FUNC_SRAV) ? 2'b01 : 
+                     (i_op_code == `OP_BEQ) ? 2'b11 : 2'b00;
+    assign o_br = (i_op_code == `OP_BEQ);
+    assign o_j = (i_op_code == `OP_J);
+    assign o_reg_dc = (i_op_code == `OP_SPCL | i_op_code == `OP_BEQ);
     assign o_alu_sc = o_reg_dc;
-    assign o_reg_wc = inst_type == 1;
-    assign o_dmem_we = (inst_type == 2);
-    assign o_reg_we = ~(inst_type == 2 || inst_type == 6 || inst_type == 7);
-    assign o_ext_type = (inst_type != 3);
+    assign o_reg_wc = (i_op_code == `OP_LW);
+    assign o_dmem_we = (i_op_code == `OP_SW);
+    assign o_reg_we = ~(i_op_code == `OP_SW | i_op_code == `OP_BEQ | i_op_code == `OP_J);
+    assign o_ext_type = (i_op_code != `OP_ADDIU);
 endmodule
