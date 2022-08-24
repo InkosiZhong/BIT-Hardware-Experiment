@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Aug 23 15:35:19 2022
+# Process ID: 16544
+# Current directory: D:/LAB/flow-line-cpu/flow-line-cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent3536 D:\LAB\flow-line-cpu\flow-line-cpu\flow-line-cpu.xpr
+# Log file: D:/LAB/flow-line-cpu/flow-line-cpu/vivado.log
+# Journal file: D:/LAB/flow-line-cpu/flow-line-cpu\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/LAB/flow-line-cpu/flow-line-cpu/flow-line-cpu.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'.
+update_compile_order -fileset sources_1
+launch_simulation
+Command: launch_simulation 
+boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/LAB/flow-line-cpu/flow-line-cpu/flow-line-cpu.sim/sim_1/behav/xsim/simulate.log"
+exit

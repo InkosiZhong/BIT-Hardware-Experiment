@@ -1,0 +1,14 @@
+0.6
+2019.2
+Nov  6 2019
+21:57:16
+D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,,,,,,,
+D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sim_1/new/testbench.v,1660885194,verilog,,,,testbench,,,,,,,,
+D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/alu.v,1660902306,verilog,,D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/br_unit.v,,alu,,,,,,,,
+D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/br_unit.v,1660888675,verilog,,D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/controller.v,,br_unit,,,,,,,,
+D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/controller.v,1660879335,verilog,,D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/d_mem.v,,controller,,,,,,,,
+D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/d_mem.v,1660881762,verilog,,D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/i_mem.v,,d_mem,,,,,,,,
+D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/i_mem.v,1660889173,verilog,,D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/pc.v,,i_mem,,,,,,,,
+D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/pc.v,1660887886,verilog,,D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/single_cycle_cpu.v,,pc,,,,,,,,
+D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/reg_heap.v,1660883660,verilog,,D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sim_1/new/testbench.v,,reg_heap,,,,,,,,
+D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/single_cycle_cpu.v,1660880518,verilog,,D:/LAB/single-cycle-cpu/single_cycle_cpu/single_cycle_cpu.srcs/sources_1/new/reg_heap.v,,single_cycle_cpu,,,,,,,,

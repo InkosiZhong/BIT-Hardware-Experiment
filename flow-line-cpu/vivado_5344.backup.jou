@@ -1,0 +1,18 @@
+#-----------------------------------------------------------
+# Vivado v2019.2 (64-bit)
+# SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
+# IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
+# Start of session at: Tue Aug 23 15:36:39 2022
+# Process ID: 5344
+# Current directory: D:/LAB/flow-line-cpu/flow-line-cpu
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15044 D:\LAB\flow-line-cpu\flow-line-cpu\flow-line-cpu.xpr
+# Log file: D:/LAB/flow-line-cpu/flow-line-cpu/vivado.log
+# Journal file: D:/LAB/flow-line-cpu/flow-line-cpu\vivado.jou
+#-----------------------------------------------------------
+start_guioopen_project D:/LAB/flow-line-cpu/flow-line-cpu/flow-line-cpu.xpruupdate_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/LAB/flow-line-cpu/flow-line-cpu/testbench_behav.wcfg
+source testbench.tcl
+relaunch_sim
+save_wave_config {D:/LAB/flow-line-cpu/flow-line-cpu/testbench_behav.wcfg}
+close_sim

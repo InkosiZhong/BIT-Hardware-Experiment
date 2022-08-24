@@ -1,0 +1,235 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="testbench_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="glbl" />
+            <top_module name="testbench" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="282301fs"></ZoomEndTime>
+      <Cursor1Time time="60500fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="289"></NameColumnWidth>
+      <ValueColumnWidth column_width="141"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="41" />
+   <wvobject fp_name="/testbench/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/jmp" type="logic">
+      <obj_property name="ElementShortName">jmp</obj_property>
+      <obj_property name="ObjectShortName">jmp</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/branch" type="logic">
+      <obj_property name="ElementShortName">branch</obj_property>
+      <obj_property name="ObjectShortName">branch</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/offset" type="array">
+      <obj_property name="ElementShortName">offset[31:0]</obj_property>
+      <obj_property name="ObjectShortName">offset[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/target" type="array">
+      <obj_property name="ElementShortName">target[31:0]</obj_property>
+      <obj_property name="ObjectShortName">target[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/pc_value" type="array">
+      <obj_property name="ElementShortName">pc_value[31:0]</obj_property>
+      <obj_property name="ObjectShortName">pc_value[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/inst" type="array">
+      <obj_property name="ElementShortName">inst[31:0]</obj_property>
+      <obj_property name="ObjectShortName">inst[31:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/cA" type="array">
+      <obj_property name="ElementShortName">cA[1:0]</obj_property>
+      <obj_property name="ObjectShortName">cA[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/cB" type="array">
+      <obj_property name="ElementShortName">cB[1:0]</obj_property>
+      <obj_property name="ObjectShortName">cB[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/c1" type="logic">
+      <obj_property name="ElementShortName">c1</obj_property>
+      <obj_property name="ObjectShortName">c1</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/c2" type="logic">
+      <obj_property name="ElementShortName">c2</obj_property>
+      <obj_property name="ObjectShortName">c2</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/c3" type="logic">
+      <obj_property name="ElementShortName">c3</obj_property>
+      <obj_property name="ObjectShortName">c3</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/c4" type="logic">
+      <obj_property name="ElementShortName">c4</obj_property>
+      <obj_property name="ObjectShortName">c4</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/we_d_mem" type="logic">
+      <obj_property name="ElementShortName">we_d_mem</obj_property>
+      <obj_property name="ObjectShortName">we_d_mem</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/we_reg" type="logic">
+      <obj_property name="ElementShortName">we_reg</obj_property>
+      <obj_property name="ObjectShortName">we_reg</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/alu_err" type="logic">
+      <obj_property name="ElementShortName">alu_err</obj_property>
+      <obj_property name="ObjectShortName">alu_err</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/d_mem/d_mem_space[3]" type="array">
+      <obj_property name="ElementShortName">[3][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[3][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/d_mem/d_mem_space[2]" type="array">
+      <obj_property name="ElementShortName">[2][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[2][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/d_mem/d_mem_space[1]" type="array">
+      <obj_property name="ElementShortName">[1][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[1][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/d_mem/d_mem_space[0]" type="array">
+      <obj_property name="ElementShortName">[0][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[0][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[51]" type="array">
+      <obj_property name="ElementShortName">[51][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[51][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[50]" type="array">
+      <obj_property name="ElementShortName">[50][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[50][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[49]" type="array">
+      <obj_property name="ElementShortName">[49][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[49][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[48]" type="array">
+      <obj_property name="ElementShortName">[48][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[48][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[47]" type="array">
+      <obj_property name="ElementShortName">[47][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[47][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[46]" type="array">
+      <obj_property name="ElementShortName">[46][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[46][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[45]" type="array">
+      <obj_property name="ElementShortName">[45][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[45][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[44]" type="array">
+      <obj_property name="ElementShortName">[44][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[44][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[43]" type="array">
+      <obj_property name="ElementShortName">[43][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[43][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[42]" type="array">
+      <obj_property name="ElementShortName">[42][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[42][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[41]" type="array">
+      <obj_property name="ElementShortName">[41][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[41][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[40]" type="array">
+      <obj_property name="ElementShortName">[40][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[40][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[39]" type="array">
+      <obj_property name="ElementShortName">[39][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[39][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[38]" type="array">
+      <obj_property name="ElementShortName">[38][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[38][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[37]" type="array">
+      <obj_property name="ElementShortName">[37][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[37][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[36]" type="array">
+      <obj_property name="ElementShortName">[36][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[36][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#FF0080</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[35]" type="array">
+      <obj_property name="ElementShortName">[35][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[35][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[34]" type="array">
+      <obj_property name="ElementShortName">[34][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[34][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[33]" type="array">
+      <obj_property name="ElementShortName">[33][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[33][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/single_cycle_cpu/reg_heap/reg_space[32]" type="array">
+      <obj_property name="ElementShortName">[32][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[32][7:0]</obj_property>
+      <obj_property name="CustomSignalColor">#00FFFF</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
+   </wvobject>
+</wave_config>

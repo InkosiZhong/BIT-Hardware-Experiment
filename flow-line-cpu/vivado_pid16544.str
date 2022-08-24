@@ -1,0 +1,124 @@
+/*
+
+Xilinx Vivado v2019.2 (64-bit) [Major: 2019, Minor: 2]
+SW Build: 2708876 on Wed Nov  6 21:40:23 MST 2019
+IP Build: 2700528 on Thu Nov  7 00:09:20 MST 2019
+
+Process ID (PID): 16544
+License: Customer
+
+Current time: 	Tue Aug 23 15:35:34 CST 2022
+Time zone: 	China Standard Time (Asia/Shanghai)
+
+OS: Windows 10
+OS Version: 10.0
+OS Architecture: amd64
+Available processors (cores): 8
+
+Screen size: 3840x2160
+Screen resolution (DPI): 200
+Available screens: 1
+Available disk space: 315 GB
+Default font: family=Dialog,name=Dialog,style=plain,size=24
+
+Java version: 	9.0.4 64-bit
+Java home: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4
+Java executable location: 	C:/Xilinx/Vivado/2019.2/tps/win64/jre9.0.4/bin/java.exe
+Java initial memory (-Xms): 	128 MB
+Java maximum memory (-Xmx):	 3 GB
+
+
+User name: 	26956
+User home directory: C:/Users/26956
+User working directory: D:/LAB/flow-line-cpu/flow-line-cpu
+User country: 	CN
+User language: 	zh
+User locale: 	zh_CN
+
+RDI_BASEROOT: C:/Xilinx/Vivado
+HDI_APPROOT: C:/Xilinx/Vivado/2019.2
+RDI_DATADIR: C:/Xilinx/Vivado/2019.2/data
+RDI_BINDIR: C:/Xilinx/Vivado/2019.2/bin
+
+Vivado preferences file location: C:/Users/26956/AppData/Roaming/Xilinx/Vivado/2019.2/vivado.xml
+Vivado preferences directory: C:/Users/26956/AppData/Roaming/Xilinx/Vivado/2019.2/
+Vivado layouts directory: C:/Users/26956/AppData/Roaming/Xilinx/Vivado/2019.2/layouts
+PlanAhead jar file location: 	C:/Xilinx/Vivado/2019.2/lib/classes/planAhead.jar
+Vivado log file location: 	D:/LAB/flow-line-cpu/flow-line-cpu/vivado.log
+Vivado journal file location: 	D:/LAB/flow-line-cpu/flow-line-cpu/vivado.jou
+Engine tmp dir: 	D:/LAB/flow-line-cpu/flow-line-cpu/.Xil/Vivado-16544-OSI-PC
+
+Xilinx Environment Variables
+----------------------------
+INTELFPGAOCLSDKROOT: C:\intelFPGA\18.1\hld
+XILINX: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_DSP: C:/Xilinx/Vivado/2019.2/ids_lite/ISE
+XILINX_PLANAHEAD: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO: C:/Xilinx/Vivado/2019.2
+XILINX_VIVADO_HLS: C:/Xilinx/Vivado/2019.2
+
+
+GUI allocated memory:	165 MB
+GUI max memory:		3,072 MB
+Engine allocated memory: 744 MB
+
+Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
+
+*/
+
+// TclEventType: START_GUI
+// TclEventType: PROJECT_OPEN_DIALOG
+// Tcl Message: start_gui 
+// TclEventType: PROJECT_OPEN_DIALOG
+// bB (cr):  Open Project : addNotify
+// Opening Vivado Project: D:\LAB\flow-line-cpu\flow-line-cpu\flow-line-cpu.xpr. Version: Vivado v2019.2 
+// TclEventType: DEBUG_PROBE_SET_CHANGE
+// Tcl Message: open_project D:/LAB/flow-line-cpu/flow-line-cpu/flow-line-cpu.xpr 
+// TclEventType: MSGMGR_MOVEMSG
+// TclEventType: FILE_SET_NEW
+// TclEventType: RUN_CURRENT
+// TclEventType: PROJECT_DASHBOARD_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_DASHBOARD_GADGET_NEW
+// TclEventType: PROJECT_DASHBOARD_GADGET_CHANGE
+// TclEventType: PROJECT_NEW
+// Tcl Message: open_project D:/LAB/flow-line-cpu/flow-line-cpu/flow-line-cpu.xpr 
+// Tcl Message: Scanning sources... Finished scanning sources 
+// Tcl Message: INFO: [IP_Flow 19-234] Refreshing IP repositories INFO: [IP_Flow 19-1704] No user IP repositories specified 
+// TclEventType: PROJECT_NEW
+// [GUI Memory]: 113 MB (+116337kb) [00:00:08]
+// [Engine Memory]: 718 MB (+600984kb) [00:00:08]
+// [GUI Memory]: 126 MB (+7118kb) [00:00:08]
+// [GUI Memory]: 135 MB (+2545kb) [00:00:09]
+// WARNING: HEventQueue.dispatchEvent() is taking  1952 ms.
+// Tcl Message: INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'C:/Xilinx/Vivado/2019.2/data/ip'. 
+// HMemoryUtils.trashcanNow. Engine heap size: 744 MB. GUI used memory: 83 MB. Current time: 8/23/22, 3:35:35 PM CST
+// Project name: flow-line-cpu; location: D:/LAB/flow-line-cpu/flow-line-cpu; part: xc7a35tcsg324-1
+dismissDialog("Open Project"); // bB (cr)
+// [Engine Memory]: 754 MB (+1kb) [00:00:11]
+// Tcl Message: update_compile_order -fileset sources_1 
+// Elapsed time: 23 seconds
+selectTree(PAResourceEtoH.FlowNavigatorTreePanel_FLOW_NAVIGATOR_TREE, "[, Simulation, Run Simulation]", 10, false); // u (O, cr)
+selectMenuItem(PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL, "Run Behavioral Simulation"); // ai (ao, cr)
+// Run Command: PAResourceCommand.PACommandNames_SIMULATION_RUN_BEHAVIORAL
+// e (cr):  Run Simulation : addNotify
+// TclEventType: LAUNCH_SIM
+// Tcl Message: launch_simulation 
+// Tcl Message: Command: launch_simulation  
+// Tcl Message: boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/LAB/flow-line-cpu/flow-line-cpu/flow-line-cpu.sim/sim_1/behav/xsim/simulate.log" 
+// CommandFailedException: ERROR: [Common 17-69] Command failed: boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/LAB/flow-line-cpu/flow-line-cpu/flow-line-cpu.sim/sim_1/behav/xsim/simulate.log" 
+// HOptionPane Error: 'boost::filesystem::remove: 另一个程序正在使用此文件，进程无法访问。: "D:/LAB/flow-line-cpu/ flow-line-cpu/flow-line-cpu.sim/sim_1/behav/xsim/simulate.log" (Run Simulation)'
+selectButton("OptionPane.button", "OK"); // JButton (A, G)
+selectTab((HResource) null, (HResource) null, "Messages", 1); // aL (aI, cr)
+closeFrame(PAResourceOtoP.PAViews_MESSAGES, "Messages"); // aA (aL, cr)
+selectTab((HResource) null, (HResource) null, "Reports", 2); // aL (aI, cr)
+selectTab((HResource) null, (HResource) null, "Tcl Console", 0); // aL (aI, cr)
