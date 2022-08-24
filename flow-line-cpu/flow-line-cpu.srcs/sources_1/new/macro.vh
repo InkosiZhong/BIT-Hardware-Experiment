@@ -11,7 +11,7 @@
 `define   OP_SLTIU	6'b001011
 `define   OP_ANDI	6'b001100
 `define   OP_ORI 	6'b001101
-`define   OP_XOIR	6'b001110
+`define   OP_XORI	6'b001110
 `define   OP_LUI 	6'b001111
 `define   OP_LB	    6'b100000
 `define   OP_LH	    6'b100001

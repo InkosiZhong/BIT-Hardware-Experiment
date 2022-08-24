@@ -12,12 +12,12 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="367876fs"></ZoomEndTime>
-      <Cursor1Time time="0fs"></Cursor1Time>
+      <ZoomEndTime time="568401fs"></ZoomEndTime>
+      <Cursor1Time time="162400fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="289"></NameColumnWidth>
-      <ValueColumnWidth column_width="130"></ValueColumnWidth>
+      <ValueColumnWidth column_width="122"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="91" />
    <wvobject fp_name="/testbench/clk" type="logic">
@@ -169,8 +169,9 @@
       <obj_property name="ObjectShortName">reg2_data1[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/cpu/alu_c1" type="array">
-      <obj_property name="ElementShortName">alu_c1[1:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_c1[1:0]</obj_property>
+      <obj_property name="ElementShortName">alu_c1[4:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_c1[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/cpu/br1" type="logic">
       <obj_property name="ElementShortName">br1</obj_property>
@@ -213,8 +214,9 @@
       <obj_property name="ObjectShortName">reg2_data2[31:0]</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/cpu/alu_c2" type="array">
-      <obj_property name="ElementShortName">alu_c2[1:0]</obj_property>
-      <obj_property name="ObjectShortName">alu_c2[1:0]</obj_property>
+      <obj_property name="ElementShortName">alu_c2[4:0]</obj_property>
+      <obj_property name="ObjectShortName">alu_c2[4:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/cpu/br2" type="logic">
       <obj_property name="ElementShortName">br2</obj_property>
@@ -391,9 +393,11 @@
    <wvobject fp_name="/testbench/cpu/raw_handler/reg1_relate" type="array">
       <obj_property name="ElementShortName">reg1_relate[2:0]</obj_property>
       <obj_property name="ObjectShortName">reg1_relate[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/cpu/raw_handler/reg2_relate" type="array">
       <obj_property name="ElementShortName">reg2_relate[2:0]</obj_property>
       <obj_property name="ObjectShortName">reg2_relate[2:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
 </wave_config>
