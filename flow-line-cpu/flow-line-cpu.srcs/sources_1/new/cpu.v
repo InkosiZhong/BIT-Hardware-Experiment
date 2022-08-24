@@ -52,7 +52,7 @@ module cpu(
     wire [31:0] imm2;
     wire [31:0] reg1_data1;
     wire [31:0] reg2_data1;
-    wire [1:0] alu_c1;
+    wire [4:0] alu_c1;
     wire br1;
     wire j1;
     wire reg_dc1;
@@ -63,7 +63,7 @@ module cpu(
     wire ext_type;
     wire [31:0] reg1_data2;
     wire [31:0] reg2_data2;
-    wire [1:0] alu_c2;
+    wire [4:0] alu_c2;
     wire br2;
     wire j2;
     wire reg_dc2;
@@ -117,7 +117,7 @@ module cpu(
         // current instruction
         .i_reg1_addr(reg1_addr),
         .i_reg2_addr(rt_addr1),
-        .i_en_reg1(alu_c2 != 2),
+        .i_en_reg1(alu_c2 != 9),
         .i_en_reg2(~alu_sc2),
         // last instructions
         .i_last_waddr1(reg_dc2 ? rd_addr2 : rt_addr2),

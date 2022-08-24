@@ -10,7 +10,7 @@ module d_mem(
     );
     reg [7:0] d_mem_space [255:0];
     initial begin
-        $readmemh("D:/LAB/cpu/flow-line-cpu/data.txt", d_mem_space);
+        $readmemh("../../../../data.txt", d_mem_space);
     end
     wire [7:0] low_addr = i_addr[7:0];
     assign o_rdata = {d_mem_space[low_addr+3],

@@ -15,7 +15,7 @@ module reg_heap(
     );
     reg [7:0] reg_space [127:0];
     initial begin
-        $readmemh("D:/LAB/cpu/flow-line-cpu/reg.txt", reg_space);
+        $readmemh("../../../../reg.txt", reg_space);
     end
     wire [7:0] full_reg1_addr = {3'b000, i_reg1_addr} << 2;
     assign o_reg1_data = {reg_space[full_reg1_addr+3],

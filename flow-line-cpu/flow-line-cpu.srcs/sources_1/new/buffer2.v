@@ -10,7 +10,7 @@ module buffer2(
     input i_dmem_we,
     input i_br,
     input i_jmp,
-    input [1:0] i_alu_c,
+    input [4:0] i_alu_c,
     input i_alu_sc, // src control
     input i_reg_dc, // dst control
     // data
@@ -27,7 +27,7 @@ module buffer2(
     output o_dmem_we,
     output o_br,
     output o_jmp,
-    output [1:0] o_alu_c,
+    output [4:0] o_alu_c,
     output o_alu_sc,
     output o_reg_dc,
     // data
@@ -41,7 +41,7 @@ module buffer2(
     );
     // cmd
     reg buf_reg_we, buf_reg_wc, buf_dmem_we, buf_br, buf_jmp, buf_alu_sc, buf_reg_dc;
-    reg [1:0] buf_alu_c;
+    reg [4:0] buf_alu_c;
     assign o_reg_we = buf_reg_we;
     assign o_reg_wc = buf_reg_wc;
     assign o_dmem_we = buf_dmem_we;

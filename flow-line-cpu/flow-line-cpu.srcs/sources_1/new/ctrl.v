@@ -5,7 +5,7 @@
 module ctrl(
     input [5:0] i_op_code,
     input [5:0] i_func_code,
-    output [1:0] o_alu_c,    // 0:+, 1:<<, 2:=, 3:==
+    output [4:0] o_alu_c,    // 0:+, 1:<<, 2:=, 3:==
     output o_br,        // branch
     output o_j,         // jump
     output o_reg_dc,    // dst control (addr)
@@ -16,9 +16,10 @@ module ctrl(
     output o_ext_type
     );
     
-    assign o_alu_c = (i_op_code == `OP_LUI) ? 2'b10 :
-                     (i_op_code == `OP_SPCL & i_func_code == `FUNC_SRAV) ? 2'b01 : 
-                     (i_op_code == `OP_BEQ) ? 2'b11 : 2'b00;
+    assign o_alu_c = (i_op_code == `OP_LUI) ? 9 :
+                     (i_op_code == `OP_SPCL & i_func_code == `FUNC_SRAV) ? 16 : 
+                     (i_op_code == `OP_BEQ) ? 17 : 
+                     (i_op_code == `OP_ADDIU) ? 1 : 5;
     assign o_br = (i_op_code == `OP_BEQ);
     assign o_j = (i_op_code == `OP_J);
     assign o_reg_dc = (i_op_code == `OP_SPCL | i_op_code == `OP_BEQ);

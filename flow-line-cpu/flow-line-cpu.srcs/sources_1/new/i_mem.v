@@ -7,7 +7,7 @@ module i_mem(
     );
     reg [7:0] i_mem_space[255:0];
     initial begin
-        $readmemh("D:/LAB/cpu/flow-line-cpu/inst.txt", i_mem_space);
+        $readmemh("../../../../inst.txt", i_mem_space);
     end
     wire[7:0] low_addr = i_addr[7:0];
     assign o_inst = {i_mem_space[low_addr+3],
