@@ -14,11 +14,17 @@ module alu(
     );
     wire [31:0] in1 = i_reg1_data;
     wire [31:0] in2 = i_alu_sc ? i_imm : i_reg2_data;
-    wire [64:0] full_res = (i_alu_c == 3 || i_alu_c == 7) ? in1 * in2 : 0;
+    wire s1 = in1[31];
+    wire s2 = in2[31];
+    wire [31:0] in1u = s1 ? ~in1+1 : in1;
+    wire [31:0] in2u = s2 ? ~in2+1 : in2;
+    wire [64:0] full_res = (i_alu_c == 3) ? in1 * in2 : 
+                           (i_alu_c == 7) ? (s1 ^ s2) ? ~(in1u * in2u) + 1 : in1u * in2u : 0;
     assign o_lo_res = (i_alu_c == 1 || i_alu_c == 5) ? in1 + in2 : 
                       (i_alu_c == 2 || i_alu_c == 6) ? in1 - in2 : 
                       (i_alu_c == 3 || i_alu_c == 7) ? full_res[31:0] :
-                      (i_alu_c == 4 || i_alu_c == 8) ? in1 / in2 :
+                      (i_alu_c == 4) ? in1 / in2 :
+                      (i_alu_c == 8) ? (s1 ^ s2) ? ~(in1u / in2u) + 1 : in1u / in2u :
                       (i_alu_c == 9) ? {i_imm, 16'h0000} :
                       (i_alu_c == 10) ? in1 & in2 :
                       (i_alu_c == 11) ? in1 | in2 :
@@ -41,5 +47,6 @@ module alu(
                       (i_alu_c == 28) ? in1 > 0 :      // BGTZ
                       32'b0;   // default
       assign o_hi_res = (i_alu_c == 3 || i_alu_c == 7) ? full_res[63:32] :
-                        (i_alu_c == 4 || i_alu_c == 8) ? in1 % in2 : 0;
+                        (i_alu_c == 4) ? in1 % in2 : 
+                        (i_alu_c == 8) ? s1 ? ~(in1u / in2u) + 1 : in1u / in2u : 0;
 endmodule

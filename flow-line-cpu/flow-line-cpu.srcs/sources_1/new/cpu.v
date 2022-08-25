@@ -137,6 +137,7 @@ module cpu(
     wire [31:0] alu_hi_res2;
     wire [31:0] dmem_rdata1;
     wire [31:0] spcl_data2;
+    wire spcl_we3;
     raw_handler raw_handler(
         // current instruction
         .i_reg1_addr(reg1_addr),
@@ -222,7 +223,6 @@ module cpu(
     wire [31:0] dmem_wdata;
     wire [2:0] dmem_mode3;
     wire dmem_we3;
-    wire spcl_we3;
     // stage 3
     alu alu(
         .i_alu_c(alu_c2),
