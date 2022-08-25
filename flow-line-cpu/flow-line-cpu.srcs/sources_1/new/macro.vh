@@ -38,6 +38,8 @@
 `define   FUNC_JALR		6'b001001
 `define   FUNC_MOVZ		6'b001010
 `define   FUNC_MOVN		6'b001011
+`define   FUNC_MFHI		6'b010000
+`define   FUNC_MFLO		6'b010010
 `define   FUNC_MULT		6'b011000
 `define   FUNC_MULTU	6'b011001
 `define   FUNC_DIV		6'b011010

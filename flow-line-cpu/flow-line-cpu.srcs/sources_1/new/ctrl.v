@@ -13,11 +13,13 @@ module ctrl(
     output o_j,         // jump
     output o_reg_dc,    // dst control (addr)
     output o_alu_sc,    // src control
-    output o_reg_wc,    // write control (data)
+    output [1:0] o_reg_wc,    // write control (data), 0:alu 1:dmem 2:spcl
     // 1:byte 2:halfword 3:byte(s) 4:halfword(s) 5:left 6:right 7:word
     output [2:0] o_dmem_mode, // write / read mode
     output o_dmem_we,   // write enable for data memory
     output o_reg_we,    // write enable for register heap
+    output o_spcl_we,   // write enable for special registers
+    output o_spcl_rc,   // read control, 0:lo, 1:hi
     output o_ext_type
     );
     
@@ -90,7 +92,8 @@ module ctrl(
                         i_func_code == `FUNC_ADDU | i_func_code == `FUNC_SUB |
                         i_func_code == `FUNC_SUBU | i_func_code == `FUNC_AND |
                         i_func_code == `FUNC_OR | i_func_code == `FUNC_XOR |
-                        i_func_code == `FUNC_NOR));
+                        i_func_code == `FUNC_NOR | i_func_code == `FUNC_MFHI |
+                        i_func_code == `FUNC_MFLO));
     assign o_alu_sc = (i_op_code == `OP_ADDI | i_op_code == `OP_ADDIU | i_op_code == `OP_SLTI |
                        i_op_code == `OP_SLTIU | i_op_code == `OP_ANDI | i_op_code == `OP_ORI |
                        i_op_code == `OP_XORI | i_op_code == `OP_LUI | i_op_code == `OP_LB |
@@ -102,13 +105,20 @@ module ctrl(
                         i_func_code == `FUNC_SRA)));
     assign o_reg_wc = (i_op_code == `OP_LB | i_op_code == `OP_LH | i_op_code == `OP_LWL | 
                        i_op_code == `OP_LW | i_op_code == `OP_LBU | i_op_code == `OP_LHU | 
-                       i_op_code == `OP_LWR);
+                       i_op_code == `OP_LWR) ? 1 : (i_op_code == `OP_SPCL & 
+                       (i_func_code == `FUNC_MFHI | i_func_code == `FUNC_MFLO)) ? 2 : 0;
     assign o_dmem_we = (i_op_code == `OP_SB | i_op_code == `OP_SH | i_op_code == `OP_SWL | 
-                        i_op_code == `OP_SW | i_op_code == `OP_SWR);
+                        i_op_code == `OP_SW | i_op_code == `OP_SWR | (i_op_code == `OP_SPCL & 
+                        (i_func_code == `FUNC_MFHI | i_func_code == `FUNC_MFLO)));
     assign o_reg_we = ~(i_op_code == `OP_J | i_op_code == `OP_BEQ | i_op_code == `OP_BNE |
                         i_op_code == `OP_BLEZ | i_op_code == `OP_BGTZ | i_op_code == `OP_SB |
                         i_op_code == `OP_SH | i_op_code == `OP_SWL | i_op_code == `OP_SW |
-                        i_op_code == `OP_SWR | (i_op_code == `OP_SPCL & i_func_code == `FUNC_JR));
+                        i_op_code == `OP_SWR | (i_op_code == `OP_SPCL & (i_func_code == `FUNC_JR | 
+                        i_func_code == `FUNC_MULT | i_func_code == `FUNC_MULTU | 
+                        i_func_code == `FUNC_DIV | i_func_code == `FUNC_DIVU)));
+    assign o_spcl_we = (i_op_code == `OP_SPCL & (i_func_code == `FUNC_MULT | i_func_code == `FUNC_MULTU | 
+                        i_func_code == `FUNC_DIV | i_func_code == `FUNC_DIVU));
+    assign o_spcl_rc = (i_op_code == `OP_SPCL & i_func_code == `FUNC_MFHI);
     assign o_ext_type = ~(i_op_code == `OP_ADDIU | i_op_code == `OP_SLTIU | i_op_code == `OP_LBU |
                           i_op_code == `OP_LHU | (i_op_code == `OP_SPCL & 
                           (i_func_code == `FUNC_MULTU | i_func_code == `FUNC_DIVU |

@@ -4,12 +4,13 @@ module reg_heap(
     input clk,
     input rst,
     input i_we,           // write_enable
-    input i_reg_wc,
+    input [1:0] i_reg_wc,
     input [4:0] i_reg1_addr,
     input [4:0] i_reg2_addr,
     input [4:0] i_reg3_addr,
     input [31:0] i_mem_wdata, // data from data memory
     input [31:0] i_alu_wdata, // data from alu
+    input [31:0] i_spcl_wdata, // data from special registers
     output [31:0] o_reg1_data,
     output [31:0] o_reg2_data
     );
@@ -28,7 +29,8 @@ module reg_heap(
                           reg_space[full_reg2_addr+1],
                           reg_space[full_reg2_addr]};
     wire [7:0] waddr = {3'b000, i_reg3_addr} << 2;
-    wire [31:0] wdata = i_reg_wc ? i_mem_wdata : i_alu_wdata;
+    wire [31:0] wdata = (i_reg_wc == 1) ? i_mem_wdata : 
+                        (i_reg_wc == 2) ? i_spcl_wdata : i_alu_wdata;
     always @(posedge clk) begin
         if(i_we) begin
             reg_space[waddr+3] <= wdata[31:24];
