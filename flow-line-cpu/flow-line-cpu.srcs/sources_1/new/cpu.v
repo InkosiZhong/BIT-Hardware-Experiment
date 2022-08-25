@@ -71,6 +71,7 @@ module cpu(
     wire reg_wc2;
     wire dmem_we2;
     wire reg_we2;
+    wire [2:0] dmem_mode1;
     wire [31:0] pc3;
     wire [31:0] dmem_rdata2;
     wire [31:0] alu_res3;
@@ -88,6 +89,7 @@ module cpu(
         .o_alu_sc(alu_sc1),
         .o_reg_wc(reg_wc1),
         .o_dmem_we(dmem_we1),
+        .o_dmem_mode(dmem_mode1),
         .o_reg_we(reg_we1),
         .o_ext_type(ext_type)
     );
@@ -109,6 +111,7 @@ module cpu(
     wire [31:0] reg1_wo_raw;
     wire [31:0] reg2_wo_raw;
     wire reg_we3, reg_wc3;
+    wire [2:0] dmem_mode2;
     wire [4:0] reg_waddr1;
     wire [31:0] alu_res1;
     wire [31:0] alu_res2;
@@ -153,6 +156,7 @@ module cpu(
         .i_reg_we(reg_we1),
         .i_reg_wc(reg_wc1),
         .i_dmem_we(dmem_we1),
+        .i_dmem_mode(dmem_mode1),
         .i_br(br1),
         .i_jmp(j1),
         .i_alu_c(alu_c1),
@@ -170,6 +174,7 @@ module cpu(
         .o_reg_we(reg_we2),
         .o_reg_wc(reg_wc2),
         .o_dmem_we(dmem_we2),
+        .o_dmem_mode(dmem_mode2),
         .o_br(br2),
         .o_jmp(j2),
         .o_alu_c(alu_c2),
@@ -187,6 +192,7 @@ module cpu(
     
     wire [31:0] pc4;
     wire [31:0] dmem_wdata;
+    wire [2:0] dmem_mode3;
     wire dmem_we3;
     // stage 3
     alu alu(
@@ -215,6 +221,7 @@ module cpu(
         .i_reg_we(reg_we2),
         .i_reg_wc(reg_wc2),
         .i_dmem_we(dmem_we2),
+        .i_dmem_mode(dmem_mode2),
         .i_br(br2),
         .i_jmp(j2),
         // data
@@ -226,6 +233,7 @@ module cpu(
         .o_reg_we(reg_we3),
         .o_reg_wc(reg_wc3),
         .o_dmem_we(dmem_we3),
+        .o_dmem_mode(dmem_mode3),
         .o_jc(jc),
         // data
         .o_alu_res(alu_res2),
@@ -239,6 +247,7 @@ module cpu(
         .clk(clk),
         .rst(rst),
         .i_we(dmem_we3),
+        .i_mode(dmem_mode3),
         .i_addr(alu_res2),
         .i_wdata(dmem_wdata),
         .o_rdata(dmem_rdata1)

@@ -8,6 +8,7 @@ module buffer3(
     input i_reg_we,
     input i_reg_wc,
     input i_dmem_we,
+    input [2:0] i_dmem_mode,
     input i_br,
     input i_jmp,
     // data
@@ -19,6 +20,7 @@ module buffer3(
     output o_reg_we,
     output o_reg_wc,
     output o_dmem_we,
+    output [2:0] o_dmem_mode,
     output o_jc, // jump control
     // data
     output [31:0] o_alu_res,
@@ -28,15 +30,18 @@ module buffer3(
     );
     // cmd
     reg buf_reg_we, buf_reg_wc, buf_dmem_we, buf_br, buf_jmp;
+    reg [2:0] buf_dmem_mode;
     assign o_reg_we = buf_reg_we;
     assign o_reg_wc = buf_reg_wc;
     assign o_dmem_we = buf_dmem_we;
+    assign o_dmem_mode = buf_dmem_mode;
     
     always @(posedge clk or negedge rst) begin
         if(~rst | i_flush) begin
             buf_reg_we <= 0;
             buf_reg_wc <= 0;
             buf_dmem_we <= 0;
+            buf_dmem_mode <= 0;
             buf_br <= 0;
             buf_jmp <= 0;
         end
@@ -44,6 +49,7 @@ module buffer3(
             buf_reg_we <= i_reg_we;
             buf_reg_wc <= i_reg_wc;
             buf_dmem_we <= i_dmem_we;
+            buf_dmem_mode <= i_dmem_mode;
             buf_br <= i_br;
             buf_jmp <= i_jmp;
         end

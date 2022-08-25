@@ -14,6 +14,8 @@ module ctrl(
     output o_reg_dc,    // dst control (addr)
     output o_alu_sc,    // src control
     output o_reg_wc,    // write control (data)
+    // 1:byte 2:halfword 3:byte(s) 4:halfword(s) 5:left 6:right 7:word
+    output [2:0] o_dmem_mode, // write / read mode
     output o_dmem_we,   // write enable for data memory
     output o_reg_we,    // write enable for register heap
     output o_ext_type
@@ -111,4 +113,12 @@ module ctrl(
                           i_op_code == `OP_LHU | (i_op_code == `OP_SPCL & 
                           (i_func_code == `FUNC_MULTU | i_func_code == `FUNC_DIVU |
                            i_func_code == `FUNC_ADDU | i_func_code == `FUNC_SUBU)));
+    // 1:byte 2:halfword 3:byte(s) 4:halfword(s) 5:left 6:right 7:word
+    assign o_dmem_mode = (i_op_code == `OP_LBU) ? 1 :
+                         (i_op_code == `OP_LHU) ? 2 :
+                         (i_op_code == `OP_LB | i_op_code == `OP_SB) ? 3 :
+                         (i_op_code == `OP_LH | i_op_code == `OP_SH) ? 4 :
+                         (i_op_code == `OP_LWL | i_op_code == `OP_SWL) ? 5 :
+                         (i_op_code == `OP_LWR | i_op_code == `OP_SWR) ? 6 :
+                         (i_op_code == `OP_LW | i_op_code == `OP_SW) ? 7 : 0;
 endmodule

@@ -2,13 +2,13 @@
 # Webtalk v2019.2 (64-bit)
 # SW Build 2708876 on Wed Nov  6 21:40:23 MST 2019
 # IP Build 2700528 on Thu Nov  7 00:09:20 MST 2019
-# Start of session at: Wed Aug 24 17:07:14 2022
-# Process ID: 27528
+# Start of session at: Thu Aug 25 10:39:52 2022
+# Process ID: 12232
 # Current directory: D:/LAB/cpu/flow-line-cpu/flow-line-cpu.sim/sim_1/behav/xsim
 # Command line: wbtcv.exe -mode batch -source D:/LAB/cpu/flow-line-cpu/flow-line-cpu.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/LAB/cpu/flow-line-cpu/flow-line-cpu.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: D:/LAB/cpu/flow-line-cpu/flow-line-cpu.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
 source D:/LAB/cpu/flow-line-cpu/flow-line-cpu.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-186] 'D:/LAB/cpu/flow-line-cpu/flow-line-cpu.sim/sim_1/behav/xsim/xsim.dir/testbench_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Wed Aug 24 17:07:19 2022. For additional details about this file, please refer to the WebTalk help file at C:/Xilinx/Vivado/2019.2/doc/webtalk_introduction.html.
-INFO: [Common 17-206] Exiting Webtalk at Wed Aug 24 17:07:19 2022...
+webtalk_transmit: Time (s): cpu = 00:00:00 ; elapsed = 00:00:07 . Memory (MB): peak = 92.492 ; gain = 0.000
+INFO: [Common 17-206] Exiting Webtalk at Thu Aug 25 10:39:59 2022...

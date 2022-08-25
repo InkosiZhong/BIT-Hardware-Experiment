@@ -8,6 +8,7 @@ module buffer2(
     input i_reg_we, // write enable
     input i_reg_wc, // write control
     input i_dmem_we,
+    input [2:0] i_dmem_mode,
     input i_br,
     input i_jmp,
     input [4:0] i_alu_c,
@@ -25,6 +26,7 @@ module buffer2(
     output o_reg_we,
     output o_reg_wc,
     output o_dmem_we,
+    output [2:0] o_dmem_mode,
     output o_br,
     output o_jmp,
     output [4:0] o_alu_c,
@@ -42,9 +44,11 @@ module buffer2(
     // cmd
     reg buf_reg_we, buf_reg_wc, buf_dmem_we, buf_br, buf_jmp, buf_alu_sc, buf_reg_dc;
     reg [4:0] buf_alu_c;
+    reg [2:0] buf_dmem_mode;
     assign o_reg_we = buf_reg_we;
     assign o_reg_wc = buf_reg_wc;
     assign o_dmem_we = buf_dmem_we;
+    assign o_dmem_mode = buf_dmem_mode;
     assign o_br = buf_br;
     assign o_jmp = buf_jmp;
     assign o_alu_c = buf_alu_c;
@@ -56,6 +60,7 @@ module buffer2(
             buf_reg_we <= 0;
             buf_reg_wc <= 0;
             buf_dmem_we <= 0;
+            buf_dmem_mode <= 0;
             buf_br <= 0;
             buf_jmp <= 0;
             buf_alu_sc <= 0;
@@ -66,6 +71,7 @@ module buffer2(
             buf_reg_we <= i_reg_we;
             buf_reg_wc <= i_reg_wc;
             buf_dmem_we <= i_dmem_we;
+            buf_dmem_mode <= i_dmem_mode;
             buf_br <= i_br;
             buf_jmp <= i_jmp;
             buf_alu_sc <= i_alu_sc;
