@@ -2,7 +2,14 @@
 
 module cpu(
     input clk,
-    input rst
+    input rst,
+    // additional for uart
+    input i_set_rx_new,
+    input i_set_tx_old,
+    input [7:0] i_rx_data,
+    output o_rx_state,
+    output o_tx_state,
+    output [31:0] o_tx_data
     );
     wire jc;
     wire [31:0] j_pc;  // jump target
@@ -111,7 +118,14 @@ module cpu(
         .i_alu_wdata(alu_lo_res3),
         .i_spcl_wdata(spcl_data4),
         .o_reg1_data(reg1_data1),
-        .o_reg2_data(reg2_data1)
+        .o_reg2_data(reg2_data1),
+        // additional for uart
+        .i_set_rx_new(i_set_rx_new),
+        .i_set_tx_old(i_set_tx_old),
+        .i_rx_data(i_rx_data),
+        .o_rx_state(o_rx_state),
+        .o_tx_state(o_tx_state),
+        .o_tx_data(o_tx_data)
     );
     
     spcl_reg spcl_reg(
@@ -143,7 +157,7 @@ module cpu(
         .i_reg1_addr(reg1_addr),
         .i_reg2_addr(rt_addr1),
         .i_en_reg1(alu_c1 != 9),
-        .i_en_reg2(~alu_sc1),
+        .i_en_reg2((~alu_sc1) | dmem_we1),
         .i_en_spcl(reg_wc1 == 2),
         // last instructions
         .i_last_waddr1(reg_dc2 ? rd_addr2 : rt_addr2),
@@ -153,7 +167,8 @@ module cpu(
         .i_reg_we1((reg_wc1 == 2) ? spcl_we2 : reg_we2),
         .i_reg_we2((reg_wc1 == 2) ? spcl_we3 : reg_we3),
         .i_reg_we3((reg_wc1 == 2) ? spcl_we4 : reg_we4),
-        .i_reg_wdata1(((reg_we2 & reg_wc2 == 0) | ~spcl_rc) ?  alu_lo_res1 : alu_hi_res1),
+        .i_reg_wdata1((reg_wc2 == 2) ? spcl_data2 :
+                      ((reg_we2 & reg_wc2 == 0) | ~spcl_rc) ?  alu_lo_res1 : alu_hi_res1),
         .i_reg_wdata2((reg_we3 & reg_wc3 == 1) ? dmem_rdata1 : 
                       ((reg_we3 & reg_wc3 == 0) | ~spcl_rc) ? alu_lo_res2 : alu_hi_res2),
         .i_reg_wdata3((reg_we4 & reg_wc4 == 1) ? dmem_rdata2 : 

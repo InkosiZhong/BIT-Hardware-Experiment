@@ -41,10 +41,10 @@ module alu(
                       (i_alu_c == 22) ? in1 > in2 :
                       (i_alu_c == 23) ? in2 == 0 :     // MOVZ
                       (i_alu_c == 24) ? in2 != 0 :     // MOVN
-                      (i_alu_c == 25) ? in1 <= 0 :     // BLEZ
-                      (i_alu_c == 26) ? in1 >= 0 :     // BGEZ
-                      (i_alu_c == 27) ? in1 < 0 :      // BLTZ
-                      (i_alu_c == 28) ? in1 > 0 :      // BGTZ
+                      (i_alu_c == 25) ? in1[31] == 1 | in1 == 0 :     // BLEZ
+                      (i_alu_c == 26) ? in1[31] == 0 :                // BGEZ
+                      (i_alu_c == 27) ? in1[31] == 1 :                // BLTZ
+                      (i_alu_c == 28) ? in1[31] == 0 & in1 > 0 :      // BGTZ
                       32'b0;   // default
       assign o_hi_res = (i_alu_c == 3 || i_alu_c == 7) ? full_res[63:32] :
                         (i_alu_c == 4) ? in1 % in2 : 
