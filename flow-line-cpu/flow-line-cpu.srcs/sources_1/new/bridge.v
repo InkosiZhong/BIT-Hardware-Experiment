@@ -35,10 +35,10 @@ module bridge(
     end
     
     wire [7:0] tx_data[3:0];
-    assign tx_data[3] = i_tx_data / 1000 % 10;
-    assign tx_data[2] = i_tx_data / 100 % 10;
-    assign tx_data[1] = i_tx_data / 10 % 10;
-    assign tx_data[0] = i_tx_data % 10;
+    assign tx_data[0] = i_tx_data / 1000 % 10;
+    assign tx_data[1] = i_tx_data / 100 % 10;
+    assign tx_data[2] = i_tx_data / 10 % 10;
+    assign tx_data[3] = i_tx_data % 10;
     always @(posedge clk) begin
         if(i_tx_buf_not_full & (i_tx_state | cnt > 0)) begin    // $s0 -> 1
             if(cnt >= 4)

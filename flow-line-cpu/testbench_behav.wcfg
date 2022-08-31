@@ -12,25 +12,17 @@
    </db_ref_list>
    <zoom_setting>
       <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="42019580000fs"></ZoomEndTime>
+      <ZoomEndTime time="87600000001fs"></ZoomEndTime>
       <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="271"></NameColumnWidth>
+      <NameColumnWidth column_width="263"></NameColumnWidth>
       <ValueColumnWidth column_width="116"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="29" />
+   <WVObjectSize size="19" />
    <wvobject fp_name="/testbench/clk" type="logic">
       <obj_property name="ElementShortName">clk</obj_property>
       <obj_property name="ObjectShortName">clk</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/rst" type="logic">
-      <obj_property name="ElementShortName">rst</obj_property>
-      <obj_property name="ObjectShortName">rst</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/sys/cpu/jc" type="logic">
-      <obj_property name="ElementShortName">jc</obj_property>
-      <obj_property name="ObjectShortName">jc</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/sys/cpu/pc1" type="array">
       <obj_property name="ElementShortName">pc1[31:0]</obj_property>
@@ -40,11 +32,6 @@
       <obj_property name="ElementShortName">inst1[31:0]</obj_property>
       <obj_property name="ObjectShortName">inst1[31:0]</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/sys/cpu/alu/i_alu_c" type="array">
-      <obj_property name="ElementShortName">i_alu_c[4:0]</obj_property>
-      <obj_property name="ObjectShortName">i_alu_c[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/rx_pin_in" type="logic">
       <obj_property name="ElementShortName">rx_pin_in</obj_property>
       <obj_property name="ObjectShortName">rx_pin_in</obj_property>
@@ -52,15 +39,6 @@
    <wvobject fp_name="/testbench/tx_clk_bps" type="logic">
       <obj_property name="ElementShortName">tx_clk_bps</obj_property>
       <obj_property name="ObjectShortName">tx_clk_bps</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/sys/cpu/reg_heap/reg_space[52]" type="array">
-      <obj_property name="ElementShortName">[52][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[52][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/sys/cpu/reg_heap/reg_space[48]" type="array">
-      <obj_property name="ElementShortName">[48][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[48][7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/sys/cpu/reg_heap/reg_space[72]" type="array">
       <obj_property name="ElementShortName">[72][7:0]</obj_property>
@@ -105,13 +83,6 @@
       <obj_property name="ElementShortName">tx_pin_out</obj_property>
       <obj_property name="ObjectShortName">tx_pin_out</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/sys/cpu/reg_heap/reg_space[36]" type="array">
-      <obj_property name="ElementShortName">[36][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[36][7:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="CustomSignalColor">#FFD700</obj_property>
-      <obj_property name="UseCustomSignalColor">true</obj_property>
-   </wvobject>
    <wvobject fp_name="/testbench/sys/cpu/reg_heap/reg_space[32]" type="array">
       <obj_property name="ElementShortName">[32][7:0]</obj_property>
       <obj_property name="ObjectShortName">[32][7:0]</obj_property>
@@ -119,10 +90,20 @@
       <obj_property name="CustomSignalColor">#FFD700</obj_property>
       <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
-   <wvobject fp_name="/testbench/sys/cpu/d_mem/d_mem_space[8]" type="array">
-      <obj_property name="ElementShortName">[8][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[8][7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
+   <wvobject fp_name="/testbench/sys/cpu/d_mem/d_mem_space[136]" type="array">
+      <obj_property name="ElementShortName">[136][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[136][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/sys/cpu/d_mem/d_mem_space[132]" type="array">
+      <obj_property name="ElementShortName">[132][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[132][7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/testbench/sys/cpu/reg_heap/reg_space[36]" type="array">
+      <obj_property name="ElementShortName">[36][7:0]</obj_property>
+      <obj_property name="ObjectShortName">[36][7:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="CustomSignalColor">#FFD700</obj_property>
+      <obj_property name="UseCustomSignalColor">true</obj_property>
    </wvobject>
    <wvobject fp_name="/testbench/sys/cpu/d_mem/d_mem_space[4]" type="array">
       <obj_property name="ElementShortName">[4][7:0]</obj_property>
@@ -133,31 +114,5 @@
       <obj_property name="ElementShortName">[0][7:0]</obj_property>
       <obj_property name="ObjectShortName">[0][7:0]</obj_property>
       <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/sys/bridge/i_tx_data" type="array">
-      <obj_property name="ElementShortName">i_tx_data[31:0]</obj_property>
-      <obj_property name="ObjectShortName">i_tx_data[31:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/sys/bridge/o_tx_send_data" type="array">
-      <obj_property name="ElementShortName">o_tx_send_data[7:0]</obj_property>
-      <obj_property name="ObjectShortName">o_tx_send_data[7:0]</obj_property>
-      <obj_property name="Radix">SIGNEDDECRADIX</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/sys/bridge/tx_data[3]" type="array">
-      <obj_property name="ElementShortName">[3][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[3][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/sys/bridge/tx_data[2]" type="array">
-      <obj_property name="ElementShortName">[2][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[2][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/sys/bridge/tx_data[1]" type="array">
-      <obj_property name="ElementShortName">[1][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[1][7:0]</obj_property>
-   </wvobject>
-   <wvobject fp_name="/testbench/sys/bridge/tx_data[0]" type="array">
-      <obj_property name="ElementShortName">[0][7:0]</obj_property>
-      <obj_property name="ObjectShortName">[0][7:0]</obj_property>
    </wvobject>
 </wave_config>

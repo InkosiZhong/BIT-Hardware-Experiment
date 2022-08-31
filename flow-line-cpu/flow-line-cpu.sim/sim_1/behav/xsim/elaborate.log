@@ -4,7 +4,7 @@ Running: C:/Xilinx/Vivado/2019.2/bin/unwrapped/win64.o/xelab.exe -wto bf119568ca
 Using 2 slave threads.
 Starting static elaboration
 Pass Through NonSizing Optimizer
-WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'band_sig' [D:/LAB/cpu/flow-line-cpu/flow-line-cpu.srcs/sim_1/new/testbench.v:49]
+WARNING: [VRFC 10-3091] actual bit length 32 differs from formal bit length 1 for port 'band_sig' [D:/LAB/BIT-Hardware-Experiment/flow-line-cpu/flow-line-cpu.srcs/sim_1/new/testbench.v:57]
 Completed static elaboration
 Starting simulation data flow analysis
 Completed simulation data flow analysis

@@ -24,6 +24,14 @@ module testbench(
         rx_in[5] = 42; // ASCII of *
         rx_in[6] = 50; // ASCII of 2
         rx_in[7] = 61; // ASCII of =
+        /*rx_in[0] = 51; // ASCII of 3
+        rx_in[1] = 43; // ASCII of +
+        rx_in[2] = 53; // ASCII of 5
+        rx_in[3] = 61; // ASCII of =
+        rx_in[4] = 52; // ASCII of 4
+        rx_in[5] = 42; // ASCII of *
+        rx_in[6] = 55; // ASCII of 7
+        rx_in[7] = 61; // ASCII of =*/
         #5
         rst=1;
         $display("running...");
