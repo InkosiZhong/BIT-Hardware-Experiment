@@ -11,3 +11,14 @@
 #-----------------------------------------------------------
 start_gui
 open_project D:/LAB/BIT-Hardware-Experiment/flow-line-cpu/flow-line-cpu.xpr
+update_compile_order -fileset sources_1
+launch_simulation
+open_wave_config D:/LAB/BIT-Hardware-Experiment/flow-line-cpu/testbench_behav.wcfg
+source testbench.tcl
+run 60 ms
+relaunch_sim
+current_wave_config {testbench_behav.wcfg}
+add_wave {{/testbench/sys/cpu/d_mem/d_mem_space[136]}} {{/testbench/sys/cpu/d_mem/d_mem_space[132]}} 
+relaunch_sim
+run 60 ms
+save_wave_config {D:/LAB/BIT-Hardware-Experiment/flow-line-cpu/testbench_behav.wcfg}

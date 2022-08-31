@@ -255,7 +255,9 @@ module cpu(
         .i_instr_index(instr_index2),
         .i_br(br2),
         .i_j(j2),
-        .o_pc(pc4)
+        .i_cond_ok(alu_lo_res1[0]),
+        .o_jc(jc),
+        .o_pc(j_pc)
     );
     
     buffer3 buffer3(
@@ -268,8 +270,6 @@ module cpu(
         .i_dmem_we(dmem_we2),
         .i_spcl_we(spcl_we2),
         .i_dmem_mode(dmem_mode2),
-        .i_br(br2),
-        .i_jmp(j2),
         // data
         .i_alu_lo_res(alu_lo_res1),
         .i_alu_hi_res(alu_hi_res1),
@@ -283,13 +283,11 @@ module cpu(
         .o_dmem_we(dmem_we3),
         .o_spcl_we(spcl_we3),
         .o_dmem_mode(dmem_mode3),
-        .o_jc(jc),
         // data
         .o_alu_lo_res(alu_lo_res2),
         .o_alu_hi_res(alu_hi_res2),
         .o_dmem_wdata(dmem_wdata),
         .o_reg_waddr(reg_waddr1),
-        .o_pc(j_pc),
         .o_spcl_data(spcl_data3)
     );
     
